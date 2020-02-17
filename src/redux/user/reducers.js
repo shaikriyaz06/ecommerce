@@ -1,16 +1,13 @@
-const Initial_State={
-    currentuser:null
-}
+const Initial_State={}
 const reducers=(state=Initial_State,action) => {
     switch(action.type){
-        case 'SET_USER':
+        case 'FETCH_USER':
         return {
             ...state,
-            currentuser:action.payload
+            ...action.payload
         }
         default :
         return state;
     }
 }
-    
 export default reducers;
